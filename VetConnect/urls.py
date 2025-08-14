@@ -24,4 +24,9 @@ urlpatterns = [
     path('about/', vetViews.about),
     path('chat/', views.chat_view, name='chat'),
     path('', include('vet.urls')),
+    path('admin/', admin.site.urls),
+    path('vet/', include('vet.urls')),
 ]
+
+
+

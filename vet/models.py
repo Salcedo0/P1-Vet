@@ -25,3 +25,16 @@ class VeterinaryServiceRequest(models.Model):
 
     def __str__(self):
         return f"{self.veterinarian_name} - {self.service_type} on {self.appointment_date}"
+    
+
+
+class Veterinario(models.Model):
+    nombre = models.CharField(max_length=200)
+    direccion = models.CharField(max_length=500)
+    telefono = models.CharField(max_length=20)
+    email = models.EmailField()
+    latitud = models.FloatField()
+    longitud = models.FloatField()
+
+    def __str__(self):
+        return self.nombre
